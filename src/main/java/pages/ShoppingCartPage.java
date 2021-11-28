@@ -10,7 +10,7 @@ public class ShoppingCartPage {
     public ShoppingCartPage(WebDriver driver) {
         this.driver = driver;
     }
-    @FindBy(xpath="//*[@id=\"huc-v2-order-row-item-B08WWZC13K\"]")
+    @FindBy(xpath="//span[@class='a-truncate-full a-offscreen'][contains(text(),'LEGO')]")
     private WebElement cartTitlelego71391;
 
     public String getLego71391Title(){
