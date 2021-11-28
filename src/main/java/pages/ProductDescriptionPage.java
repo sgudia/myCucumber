@@ -9,31 +9,23 @@ import org.testng.Assert;
 public class ProductDescriptionPage {
     WebDriver driver;
 
-    public ProductDescriptionPage(WebDriver driver) {
+    public ProductDescriptionPage (WebDriver driver) {
         this.driver = driver;
     }
-    @FindBy(xpath="//*[@id=\"title\"]")
+    @FindBy(xpath="//*[@id=\"productTitle\"]")
     private WebElement lego71391Title;
-
-
-    @FindBy(xpath="//*[@id=\"quantity\"]")
-    private WebElement quantityDropDown;
-
-    @FindBy(xpath="//*[@id=\"quantity\"]/option[2]")
-    private WebElement quantityDropDownOption2;
 
     @FindBy(xpath="//*[@id=\"add-to-cart-button\"]")
     private WebElement addToBasket;
 
     //get title method
-    public String getProductTitle(){
+
+    public boolean isLego71391Title() {
+        return lego71391Title.isDisplayed();
+    }
+
+    public String getLego71391Title(){
         return lego71391Title.getText();
-    }
-    public void clickQuantityDropDown(){
-        quantityDropDown.click();
-    }
-    public void clickOption2(){
-        quantityDropDownOption2.click();
     }
     public void clickAddToBasket(){
         addToBasket.click();
@@ -42,3 +34,15 @@ public class ProductDescriptionPage {
 
     }
 
+//    @FindBy(xpath="//*[@id=\"quantity\"]")
+//    private WebElement quantityDropDown;
+//
+//    @FindBy(xpath="//*[@id=\"quantity\"]/option[2]")
+//    private WebElement quantityDropDownOption2;
+
+//    public void clickQuantityDropDown(){
+////        quantityDropDown.click();
+////    }
+////    public void clickOption2(){
+////        quantityDropDownOption2.click();
+////    }

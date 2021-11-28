@@ -16,9 +16,10 @@ remote: Permission to sgudia/myCucumber.git denied to vm31.
 fatal: unable to access 'https://github.com/sgudia/myCucumber.git/': The requested URL returned error: 403
 swathigudia@swathigudiasMBP myCucumber % git remote -v
 origin  https://github.com/sgudia/myCucumber.git (fetch)
-origin  https://github.com/sgudia/myCucumber.git (push)
+origi
+n  https://github.com/sgudia/myCucumber.git (push)
 
-git push git@github.com:sgudia/myCucumber.git    
+git push git@github.com:sgudia/myCucumber.git    git
 git@github.com: Permission denied (publickey).
 fatal: Could not read from remote repository.
 

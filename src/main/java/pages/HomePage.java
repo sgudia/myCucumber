@@ -27,17 +27,11 @@ public class HomePage {
     WebElement searchInputBox;
 
     @FindBy(xpath="//div[@data-asin=\"B08WWZC13K\"]//h2//span")
-    WebElement lego71391product;
+    WebElement lego71391item;
 
     ///// Methods //////
     public boolean isHomePageLogo() {
         return homepageLogo.isDisplayed();
-    }
-
-    public String getText() {
-        String text = SignInText.getText();
-        System.out.println(text);
-        return text;
     }
 
     public boolean isCookie(){
@@ -46,24 +40,28 @@ public class HomePage {
 
     public void clickCookieAccept() {
         cookieAccept.click();
-
     }
+
+     public void clickLego71319(){
+        lego71391item.click();
+     }
+
     public void enterSearch(String searchText) {
         searchInputBox.click();
         searchInputBox.sendKeys(searchText);
         searchInputBox.sendKeys(Keys.ENTER);
     }
-    public boolean isLego71391product()
-    {
-        return lego71391product.isDisplayed();
+    public String getLegoText(){
+        String text = lego71391item.getText();
+        System.out.println(text);
+        return text;
+    }
+    public boolean islego71391item(){
+        return lego71391item.isDisplayed();
     }
 
-    public void clickLego71391() {
-       lego71391product.click();
 
-    }
-
-    }
+}
 
 
 

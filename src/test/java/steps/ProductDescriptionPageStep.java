@@ -8,17 +8,17 @@ import org.testng.Assert;
 
 public class ProductDescriptionPageStep extends BaseTest {
 
+
+
     @Then("I verify product title from product description page:{string}")
-    public void verifyTitle(String title_1){
-        System.out.println(title_1);
-        String title_2 = productDescriptionPageObj.getProductTitle();
-        System.out.println(title_2);
-        Assert.assertEquals(title_2, title_1);
+    public void verifyTitle(String title) {
+        String ProductTitle = productDescriptionPageObj.getLego71391Title();
+        Assert.assertEquals(ProductTitle, title);
     }
 
-    @And("I click on add to cart btn")
-    public void iClickOnAddToCartBtn() {
+   @And("I click on add to basket btn")
+    public void iClickOnAddToBasketBtn() {
+        productDescriptionPageObj.clickAddToBasket();
     }
-
 
 }

@@ -11,6 +11,7 @@ public class BaseTest {
     protected SignInPage signInPageObj;
     protected ProductDescriptionPage productDescriptionPageObj;
     protected ShoppingCartPage shoppingCartPageObj;
+    protected TopActionBlackPage topActionBlackPageObj;
 
 
     public static WebDriver driver;
@@ -21,6 +22,7 @@ public class BaseTest {
         signInPageObj = PageFactory.initElements(driver, SignInPage.class);
         productDescriptionPageObj = PageFactory.initElements(driver, ProductDescriptionPage.class);
         shoppingCartPageObj = PageFactory.initElements(driver, ShoppingCartPage.class);
+        topActionBlackPageObj = PageFactory.initElements(driver, TopActionBlackPage.class);
         util = PageFactory.initElements(driver, Utility.class);
 
 

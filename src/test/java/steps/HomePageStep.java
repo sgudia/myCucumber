@@ -22,14 +22,6 @@ public class HomePageStep extends BaseTest {
         driver.get(util.readPropertyFile("URL"));
     }
 
-    @And("I accept cookies")
-    public void acceptCookie() {
-        if (homePageObj.isCookie()) {
-            homePageObj.clickCookieAccept();
-            Assert.assertTrue(!homePageObj.isCookie());
-        }
-    }
-
     @Then("I verify if logo is displayed")
     public void isLogoDisplayed() {
         Assert.assertTrue(homePageObj.isHomePageLogo());
@@ -39,12 +31,18 @@ public class HomePageStep extends BaseTest {
     public void enterSearchCriteria(String txt) {
         homePageObj.enterSearch(txt);
     }
-    @And("I click on lego71391 product")
-    public void clickFirstItem() {
-        homePageObj.clickLego71391();
+    @Then("I verify current page url is:{string}")
+    public void iverifyUrl(String url){
+        Assert.assertTrue(driver.getCurrentUrl().contains(url));
     }
-    @Then("I verify lego{int} is displayed")
-    public void iVerifyLegoIsDisplayed(int arg0) {
-        Assert.assertTrue(homePageObj.isLego71391product());
+
+    @Then("I verify lego71391 is displayed")
+    public void iVerifyLegoIsDisplayed() {
+        Assert.assertTrue(homePageObj.islego71391item());
+    }
+    @And("I click on lego71391 product")
+    public void iClickOnLegoProduct() {
+        homePageObj.clickLego71319();
+
     }
 }
