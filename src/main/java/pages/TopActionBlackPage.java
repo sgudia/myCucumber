@@ -8,7 +8,7 @@ public class TopActionBlackPage {
     @FindBy(xpath = "//*[@id=\"nav-cart-count\"]")
     private WebElement quantity;
 
-    @FindBy(xpath = "//*[@id=\"add-to-cart-button\"]")
+    @FindBy(xpath = "//*[@id='nav-cart']")
     private WebElement basketIcon;
 
     public String getQuantityNumber(){
