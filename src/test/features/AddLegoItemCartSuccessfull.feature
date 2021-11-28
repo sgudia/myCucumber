@@ -3,7 +3,7 @@ Feature: Home page
   Background: I am background for amazon web application
     Given I am on home page
     Then I verify if logo is displayed
-
+@cart
   Scenario: TC_01_Add to cart
     When I search for item:"lego71391"
     Then I verify lego71391 is displayed
