@@ -16,5 +16,5 @@ Feature: Home page
 
     Then I verify quantity on basket icon is:"1"
     And I click on basket icon
-    Then I verify product title from cart page:"LEGO 71391 Super Mario Bowser's Airship Expansion Set, Collectible Buildable Game Toy for Kids with 3 Figures"
-
+  #Then I verify product title from cart page:"LEGO 71391 Super Mario Bowser's Airship Expansion Set, Collectible Buildable Game Toy for Kids with 3 Figures"
+    Then I verify product title is displayed from cart page
