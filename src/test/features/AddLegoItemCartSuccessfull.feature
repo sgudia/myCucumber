@@ -1,7 +1,8 @@
 Feature: Home page
 
   Background: I am background for amazon web application
-    Given I am on home page
+    Given I launch amazon url
+    And I accept cookies
     Then I verify if logo is displayed
 @cart
   Scenario: TC_01_Add to cart
