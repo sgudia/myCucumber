@@ -69,7 +69,16 @@ locator unstable ga unnapudu???
 Title of the item is same irrespective of the page it is displayed!!!
 ---------
 run cucumber test from terminal with tag:
- mvn test -Dcucumber.options="--tags @cart"
+mvn test -Dcucumber.options="--tags @cart"
+can be run from main/feature branch depends
+----------
+synchronizing issue with waits
+-- I used expected conditions to resolve the issue
 
-
-
+WebDriverWait wait = new WebDriverWait(driver,10);
+wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("")
+----------
+before git pull make sure that there are no changes in git status on that branch to do switch branches
+git merge main --> to update the changes to feature/working branch with local main
+To save the changes on the file added--> git add <file name> and commit and push instead of (git add.)!!!
+----------
