@@ -7,6 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import pages.SignInPage;
@@ -17,9 +18,16 @@ import java.util.concurrent.TimeUnit;
 public class HomePageStep extends BaseTest {
 
 
-    @Given("I am on home page")
+    @Given("I launch amazon url")
     public void i_am_on_home_page() throws IOException {
         driver.get(util.readPropertyFile("URL"));
+    }
+    @And("I accept cookies")
+    public void acceptCookie(){
+        if(homePageObj.isCookie()){
+            homePageObj.clickCookieAccept();
+        }
+
     }
 
     @Then("I verify if logo is displayed")

@@ -20,7 +20,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"nav-link-accountList-nav-line-1\"]")
     WebElement SignInText;
 
-    @FindBy(xpath="//*[@id='a-autoid-0']")
+    @FindBy(xpath="//*[@id='sp-cc-accept']")
     WebElement cookieAccept;
 
     @FindBy(xpath= "//*[@id=\"twotabsearchtextbox\"]")
