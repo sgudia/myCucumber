@@ -67,6 +67,9 @@ locator unstable ga unnapudu???
 
 -->element number will be unique for each shopping cart item(ex:lego 73191) locator can be traced using its unique product no.
 Title of the item is same irrespective of the page it is displayed!!!
+---------
+run cucumber test from terminal with tag:
+ mvn test -Dcucumber.options="--tags @cart"
 
 
 
