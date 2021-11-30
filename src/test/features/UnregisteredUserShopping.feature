@@ -7,5 +7,5 @@ Feature:Unregistered User shopping
 
 
     Scenario: TC_01_Unregistered user application
-      Then I verify text is displayed:"hello SignIn"
+      Then I verify text is displayed:"Hello, Sign in"
 

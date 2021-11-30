@@ -82,3 +82,27 @@ before git pull make sure that there are no changes in git status on that branch
 git merge main --> to update the changes to feature/working branch with local main
 To save the changes on the file added--> git add <file name> and commit and push instead of (git add.)!!!
 ----------
+
+30/11/21
+
+1.undefined scenario in jenkins console output--> comment out with /#
+
+2.Jenkins successful run configuration !!!!!!
+
+-->create new free style project for new add on
+-->Source code management
+   add git repository code url (from GUI) http:// Preferable
+-->build --execute shell commands
+       echo $PATH
+       export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home:/Users/swathigudia/libs/apache-maven-3.8.3/bin:/usr/bin/git"
+       echo $PATH
+       mvn clean install
+
+--> export PATH should be path of local git:javajdk:maven
+    To check the path from terminal type:(ctrl+r export command)
+    echo $ PATH  
+--> branch specifier = */main
+    apply and save changes n then build now
+--> check g
+
+

@@ -41,7 +41,6 @@ public class HomePage {
     public void clickCookieAccept() {
         cookieAccept.click();
     }
-
      public void clickLego71319(){
         lego71391item.click();
      }
@@ -60,7 +59,16 @@ public class HomePage {
         return lego71391item.isDisplayed();
     }
 
+    public boolean isSignInText(){
+        return SignInText.isDisplayed();
 
+    }
+    public String getSigninText(){
+        String text = SignInText.getText();
+        System.out.println(text);
+        return text;
+
+    }
 }
 
 
