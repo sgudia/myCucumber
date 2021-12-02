@@ -138,3 +138,11 @@ mvn test -Dcucumber.options="--tags @Smoke,@Regression"
 //            System.out.println(quantity.getText());
 //        }
 //            return quantity.getText();
+....................
+Its not a good practice to use thread.sleep!!!!!!! but exceptional cases to proceed for time being
+
+ //public String getQuantityNumber()throws Exception {
+ //Thread.sleep(1000);
+System.out.println(quantity.getText());
+return quantity.getText().toString();
+------------------------------------------------------------
