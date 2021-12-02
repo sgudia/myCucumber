@@ -46,14 +46,14 @@ public class HomePageStep extends BaseTest {
         Assert.assertTrue(driver.getCurrentUrl().contains(url));
     }
 
-    @Then("I verify lego71391 is displayed")
+    @Then("I verify lego75955 is displayed")
     public void iVerifyLegoIsDisplayed() {
-        Assert.assertTrue(homePageObj.islego71391item());
+        Assert.assertTrue(homePageObj.islego75955item());
     }
 
-    @And("I click on lego71391 product")
+    @And("I click on lego75955 product")
     public void iClickOnLegoProduct() {
-        homePageObj.clickLego71319();
+        homePageObj.clickLego75955();
     }
 
     @Then("I verify text is displayed:{string}")

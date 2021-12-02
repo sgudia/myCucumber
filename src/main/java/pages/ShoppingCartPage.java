@@ -17,13 +17,12 @@ public class ShoppingCartPage {
     public ShoppingCartPage(WebDriver driver) {
         this.driver = driver;
     }
-    @FindBy(xpath="//div[@data-asin='B08WWZC13K']")
-    WebElement titlelego71391;
+    @FindBy(xpath = "//div[@data-asin='B07BLG43H2']")
+    WebElement titleLego75955;
 
     public boolean isTitleDisplayed(){
         WebDriverWait wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@data-asin='B08WWZC13K']")));
-        return titlelego71391.isDisplayed();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@data-asin='B07BLG43H2']")));
+        return titleLego75955.isDisplayed();
     }
-
 }

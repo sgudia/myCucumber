@@ -19,7 +19,7 @@ origin  https://github.com/sgudia/myCucumber.git (fetch)
 origi
 n  https://github.com/sgudia/myCucumber.git (push)
 
-git push git@github.com:sgudia/myCucumber.git    git
+git push git@github.com:sgudia/myCucumber.git
 git@github.com: Permission denied (publickey).
 fatal: Could not read from remote repository.
 
@@ -69,7 +69,8 @@ locator unstable ga unnapudu???
 Title of the item is same irrespective of the page it is displayed!!!
 ---------
 run cucumber test from terminal with tag:
-mvn test -Dcucumber.options="--tags @cart"
+mvn test -Dcucumber.options="--tags @Smoke"
+
 can be run from main/feature branch depends
 ----------
 synchronizing issue with waits
@@ -97,12 +98,16 @@ To save the changes on the file added--> git add <file name> and commit and push
        export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home:/Users/swathigudia/libs/apache-maven-3.8.3/bin:/usr/bin/git"
        echo $PATH
        mvn clean install
+( with cucumber tag specific to shopping cart senario
+--@cart mvn test -Dcucumber.options="--tags @cart")--
 
 --> export PATH should be path of local git:javajdk:maven
     To check the path from terminal type:(ctrl+r export command)
     echo $ PATH  
 --> branch specifier = */main
     apply and save changes n then build now
---> check g
 
+-----------
+1/12/21
 
+Replacement Code --> ctrl + shift + r

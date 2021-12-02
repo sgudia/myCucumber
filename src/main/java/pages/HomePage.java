@@ -20,14 +20,14 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"nav-link-accountList-nav-line-1\"]")
     WebElement SignInText;
 
-    @FindBy(xpath="//*[@id='sp-cc-accept']")
+    @FindBy(xpath = "//*[@id='sp-cc-accept']")
     WebElement cookieAccept;
 
-    @FindBy(xpath= "//*[@id=\"twotabsearchtextbox\"]")
+    @FindBy(xpath = "//*[@id=\"twotabsearchtextbox\"]")
     WebElement searchInputBox;
 
-    @FindBy(xpath="//div[@data-asin=\"B08WWZC13K\"]//h2//span")
-    WebElement lego71391item;
+    @FindBy(xpath = "//div[@data-asin=\"B07BLG43H2\"]//h2//span")
+    WebElement lego75955item;
 
     ///// Methods //////
     public boolean isHomePageLogo() {
@@ -41,8 +41,8 @@ public class HomePage {
     public void clickCookieAccept() {
         cookieAccept.click();
     }
-     public void clickLego71319(){
-        lego71391item.click();
+     public void clickLego75955(){
+        lego75955item.click();
      }
 
     public void enterSearch(String searchText) {
@@ -51,12 +51,12 @@ public class HomePage {
         searchInputBox.sendKeys(Keys.ENTER);
     }
     public String getLegoText(){
-        String text = lego71391item.getText();
+        String text = lego75955item.getText();
         System.out.println(text);
         return text;
     }
-    public boolean islego71391item(){
-        return lego71391item.isDisplayed();
+    public boolean islego75955item(){
+        return lego75955item.isDisplayed();
     }
 
     public boolean isSignInText(){
