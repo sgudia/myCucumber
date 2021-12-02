@@ -8,8 +8,6 @@ import org.testng.Assert;
 
 public class ProductDescriptionPageStep extends BaseTest {
 
-
-
     @Then("I verify product title from product description page:{string}")
     public void verifyTitle(String title) {
         String ProductTitle = productDescriptionPageObj.getLego75955Title();

@@ -109,5 +109,40 @@ To save the changes on the file added--> git add <file name> and commit and push
 
 -----------
 1/12/21
-
 Replacement Code --> ctrl + shift + r
+----------
+2/12/21
+
+//// NoSuchElementException://// can be handled by using introducing wait on elements!!!
+public boolean isTitleDisplayed() {
+WebDriverWait wait = new WebDriverWait(driver, 40);
+wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-asin='B07BLG43H2']")));
+return titleLego75955.isDisplayed();
+}
+---------------------------------------------------------
+In cucumber test runner is tag based--> tags = {},
+ex: tags = {"@Smoke,@Regression"}
+
+From Terminal & Jenkins execute shell level command
+mvn test -Dcucumber.options="--tags @Smoke,"
+mvn test -Dcucumber.options="--tags @Regression"
+mvn test -Dcucumber.options="--tags @Smoke,@Regression"
+--------------------------------------------------------
+
+
+
+//        WebDriverWait wait = new WebDriverWait(driver,60);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/*[@id=\"nav-cart-count\"]")));
+//        if (quantity.isDisplayed()) {
+//            System.out.println("element is displayed");
+//            System.out.println(quantity.getText());
+//        }
+//            return quantity.getText();
+....................
+Its not a good practice to use thread.sleep!!!!!!! but exceptional cases to proceed for time being
+
+ //public String getQuantityNumber()throws Exception {
+ //Thread.sleep(1000);
+System.out.println(quantity.getText());
+return quantity.getText().toString();
+------------------------------------------------------------

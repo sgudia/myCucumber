@@ -5,6 +5,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features ="src/test/features",
+        tags = {},
         glue = "steps",
         dryRun = false,
         monochrome = true,

@@ -25,14 +25,20 @@ public class TopActionBlackPage {
         basketIcon.click();
     }
 
-    public String getQuantityNumber()throws Exception{
-//        WebDriverWait wait = new WebDriverWait(driver,30);
-//        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//*[@id=\"nav-cart-count\"]",T));
-//
-
+    public String getQuantityNumber()throws Exception {
         Thread.sleep(1000);
         System.out.println(quantity.getText());
         return quantity.getText().toString();
+
+        //
+        // WebDriverWait wait = new WebDriverWait(driver,60);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/*[@id=\"nav-cart-count\"]")));
+//        if (quantity.isDisplayed()) {
+//            System.out.println("element is displayed");
+//            System.out.println(quantity.getText());
+//        }
+//            return quantity.getText();
+
     }
 
 }
