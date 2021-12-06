@@ -146,3 +146,7 @@ Its not a good practice to use thread.sleep!!!!!!! but exceptional cases to proc
 System.out.println(quantity.getText());
 return quantity.getText().toString();
 ------------------------------------------------------------
+4/12/21
+
+no such element ---@fingby////java script element
+element not interactable 

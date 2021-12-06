@@ -13,7 +13,8 @@ public class HomePage {
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
-/////////Elements ////////
+
+    /////////Elements ////////
     @FindBy(xpath = "//a[@href=\"/ref=nav_logo\"]")
     WebElement homepageLogo;
 
@@ -29,46 +30,54 @@ public class HomePage {
     @FindBy(xpath = "//div[@data-asin=\"B07BLG43H2\"]//h2//span")
     WebElement lego75955item;
 
+    @FindBy(xpath = "//*[@id=\"icp-nav-flyout\"]/span")
+    WebElement flagIconlogo;
+
     ///// Methods //////
     public boolean isHomePageLogo() {
         return homepageLogo.isDisplayed();
     }
 
-    public boolean isCookie(){
+    public boolean isCookie() {
         return cookieAccept.isDisplayed();
     }
 
     public void clickCookieAccept() {
         cookieAccept.click();
     }
-     public void clickLego75955(){
+
+    public void clickLego75955() {
         lego75955item.click();
-     }
+    }
 
     public void enterSearch(String searchText) {
         searchInputBox.click();
         searchInputBox.sendKeys(searchText);
         searchInputBox.sendKeys(Keys.ENTER);
     }
-    public String getLegoText(){
+
+    public String getLegoText() {
         String text = lego75955item.getText();
         System.out.println(text);
         return text;
     }
-    public boolean islego75955item(){
+
+    public boolean islego75955item() {
         return lego75955item.isDisplayed();
     }
 
-    public boolean isSignInText(){
+    public boolean isSignInText() {
         return SignInText.isDisplayed();
 
     }
-    public String getSigninText(){
+
+    public String getSigninText() {
         String text = SignInText.getText();
         System.out.println(text);
         return text;
 
     }
+
 }
 
 

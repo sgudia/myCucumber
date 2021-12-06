@@ -14,10 +14,22 @@ public class TopActionBlackPageStep extends BaseTest {
     }
 
     @Then("I verify quantity on basket icon is:{string}")
-    public void iVerifyQuantityOnBasketIconIs(String quantitynumber)throws Exception {
+    public void iVerifyQuantityOnBasketIconIs(String quantityNumber)throws Exception {
         String x = topActionBlackPageObj.getQuantityNumber();
-        Assert.assertEquals(x, quantitynumber);
+        Assert.assertEquals(x, quantityNumber);
+    }
+    @When("I move mouse to flag icon")
+    public void iMoveMouseToFlagIcon() {
+        topActionBlackPageObj.moveToFlagIcon();
 
     }
+    @Then("I verify change Country link is displayed")
+    public void iVerifyChangeCountryLinkIsDisplayed()throws Exception {
+        Assert.assertTrue(topActionBlackPageObj.isChangeCountryLinkDisplayed());
+    }
 
+    @And("I click on Change Country link")
+    public void iClickOnChangeCountryLink() {
+        topActionBlackPageObj.clickChangeCountryLink();
+    }
 }

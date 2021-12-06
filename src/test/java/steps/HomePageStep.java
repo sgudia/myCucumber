@@ -28,7 +28,6 @@ public class HomePageStep extends BaseTest {
         if (homePageObj.isCookie()) {
             homePageObj.clickCookieAccept();
         }
-
     }
 
     @Then("I verify if logo is displayed")
@@ -41,11 +40,6 @@ public class HomePageStep extends BaseTest {
         homePageObj.enterSearch(txt);
     }
 
-    @Then("I verify current page url is:{string}")
-    public void iverifyUrl(String url){
-        Assert.assertTrue(driver.getCurrentUrl().contains(url));
-    }
-
     @Then("I verify lego75955 is displayed")
     public void iVerifyLegoIsDisplayed() {
         Assert.assertTrue(homePageObj.islego75955item());
@@ -56,8 +50,13 @@ public class HomePageStep extends BaseTest {
         homePageObj.clickLego75955();
     }
 
-    @Then("I verify text is displayed:{string}")
-    public void iVerifyTextIsDisplayed(String helloSignin) {
-        Assert.assertEquals(homePageObj.getSigninText(), helloSignin);
+    @Then("I verify current page url is:{string}")
+
+    public void iVerifyUrl(String expectedUrl) {
+
+        String currentUrl = driver.getCurrentUrl();
+        System.out.println(currentUrl);
+        Assert.assertTrue(currentUrl.contains(expectedUrl));
+
     }
 }

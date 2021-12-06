@@ -16,7 +16,7 @@ Feature: Home page
      And I click on basket icon
     Then I verify product title is displayed from cart page
 
-    Scenario: Tc_02_verify quantity from basket icon
+  Scenario: Tc_02_verify quantity from basket icon
       And I select quantity two
       And I click on add to basket btn
       Then I verify quantity on basket icon is:"2"
