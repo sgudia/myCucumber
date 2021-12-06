@@ -13,6 +13,7 @@ import org.testng.Assert;
 import pages.SignInPage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class HomePageStep extends BaseTest {
@@ -50,13 +51,21 @@ public class HomePageStep extends BaseTest {
         homePageObj.clickLego75955();
     }
 
-    @Then("I verify current page url is:{string}")
-
+    @Then("I verify current page url contains:{string}")
     public void iVerifyUrl(String expectedUrl) {
-
         String currentUrl = driver.getCurrentUrl();
-        System.out.println(currentUrl);
+        System.out.println("current page url is:"+currentUrl);
         Assert.assertTrue(currentUrl.contains(expectedUrl));
+
+    }
+
+    @And("I switch to window")
+    public void iSwitchToWindow() {
+        ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
+        driver.switchTo().window(tabs2.get(1));
+
+//        driver.Close();
+//        driver.SwitchTo().Window(browserTabs[0]);
 
     }
 }

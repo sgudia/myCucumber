@@ -28,7 +28,7 @@ public class SelectCountryPageStep extends BaseTest {
     }
 
     @And("I click on Go to Website btn")
-    public void iClickOnGoToWebsiteBtn()throws Exception {
+    public void iClickOnGoToWebsiteBtn(){
         selectCountryPageObj.clickGoToWebsiteBtn();
     }
 

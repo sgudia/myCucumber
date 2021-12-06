@@ -32,13 +32,13 @@ public class SelectCountryPage {
     public void clickNetherlandsCountry() {
         netherlandsCountry.click();
     }
-    public void clickGoToWebsiteBtn()throws Exception {
-        Thread.sleep(500);
+    public void clickGoToWebsiteBtn(){
+//        Thread.sleep(500);
 
         WebElement goToWebsiteButton  = driver.findElement(By.xpath("//*[@id=\"a-autoid-2-announce\"][contains(text(),'Go to website')]"));
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();",goToWebsiteButton );
-        Thread.sleep(10000);
+//        Thread.sleep(10000);
 
 
 //        WebDriverWait wait = new WebDriverWait(driver, 60);

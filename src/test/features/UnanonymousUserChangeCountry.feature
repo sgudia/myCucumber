@@ -5,7 +5,7 @@ Feature: UnanonymousUserChangeCountry
      Then I verify if logo is displayed
 
   Scenario: TC_01_UnanonymousUser_ChangeCountry
-    Then I verify current page url is:"https://www.amazon.co.uk"
+    Then I verify current page url contains:"https://www.amazon.co.uk"
     When I move mouse to flag icon
     Then I verify change Country link is displayed
      And I click on Change Country link
@@ -16,5 +16,6 @@ Feature: UnanonymousUserChangeCountry
     When I select country as Netherlands
     Then I verify if selected country is:"Netherlands (Nederland)"
      And I click on Go to Website btn
-    Then I verify current page url is:"https://www.amazon.nl"
+    And I switch to window
+    Then I verify current page url contains:"https://www.amazon.nl"
 
